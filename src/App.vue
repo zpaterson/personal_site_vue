@@ -1,21 +1,25 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <b-navbar toggleable="md" type="dark" variant="info">
+    <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+    <b-navbar-brand tag="h1" class="my-logo">
+      <router-link tag="li" to="/">{ ZP }</router-link>
+    </b-navbar-brand>
+      <b-collapse is-nav id="nav_collapse">
+        <b-navbar-nav class="ml-auto nav-links-size"> 
+          <b-nav-item>
+            <router-link tag="li" to="/resume">Resume</router-link>
+          </b-nav-item>
+          <b-nav-item>
+            <router-link tag="li" to="/about">About</router-link>
+          </b-nav-item>
+          <b-nav-item>
+            <router-link tag="li" to="/contact">Contact</router-link>
+          </b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -52,9 +56,23 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
+  color: white;
+}
+
+li:hover {
+  color: #5DE2E2;
 }
 
 a {
-  color: #42b983;
+  color: white;
+}
+ 
+.my-logo {
+  font-size: 40px;
+}
+
+.nav-links-size {
+  font-weight: bold;
+  font-size: 20px;
 }
 </style>
