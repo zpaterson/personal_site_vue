@@ -19,6 +19,7 @@
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
+    <app-heroImage v-if="['app'].indexOf($route.name)> -1"></app-heroImage>
     <router-view></router-view>
   </div>
 </template>
@@ -68,7 +69,7 @@ a {
 }
  
 .my-logo {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .nav-links-size {
