@@ -1,3 +1,16 @@
 <template>
-       <h1>Zaire's Resume</h1>
+       <div>
+         <b-img  :src="resumeImage" fluid alt="Responsive image"/>
+      </div>
 </template>
+
+<script>
+  import resumeImg from "./assets/resume.jpg";
+  export default {
+      data() {
+          return {
+             resumeImage: resumeImg
+          }
+      }
+  }
+</script>
