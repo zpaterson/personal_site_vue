@@ -19,17 +19,22 @@
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
-    <app-heroImage v-if="['app'].indexOf($route.name)> -1"></app-heroImage>
+    <app-heroImage :msg="message" :introMsg="intro" :imgPath="path" :introP1="p1" :introP2="p2" v-if="['app'].indexOf($route.name)> -1"></app-heroImage>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import aboutImg from "./assets/about1.jpg";
 export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      message: "Hi , I'm Zaire",
+      intro: "I'm a Full Stack Web Developer living in San Francisco",
+      path: aboutImg,
+      p1: "I'm a full stack web developer specializing in JavaScript, looking to enter the health and wellness field. I'm excited for opportunities",
+      p2: "in which I can expand my skillset and work in collaborative teams. Interested in working on a project together?"
     }
   }
 }
