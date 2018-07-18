@@ -8,6 +8,9 @@
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav class="ml-auto nav-links-size"> 
           <b-nav-item>
+            <router-link tag="li" to="/">Home</router-link>
+          </b-nav-item>
+          <b-nav-item>
             <router-link tag="li" to="/resume">Resume</router-link>
           </b-nav-item>
           <b-nav-item>
@@ -19,17 +22,24 @@
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
-    <app-heroImage v-if="['app'].indexOf($route.name)> -1"></app-heroImage>
+    <app-heroImage :msg="message" :introMsg="intro" :imgPath="path" :introP1="p1" :introP3="p3" v-if="['app'].indexOf($route.name)> -1"></app-heroImage>
+    <app-footer v-if="['app'].indexOf($route.name)> -1"></app-footer >
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import aboutImg from "./assets/about1.jpg";
 export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      message: "Hi , I'm Zaire",
+      intro: "I'm a Full Stack Web Developer living in San Francisco",
+      path: aboutImg,
+      p1: "I'm a full stack web developer specializing in JavaScript, looking to enter the health and wellness field. " +
+      "I'm excited for opportunities in which I can expand my skillset and work in collaborative teams.",
+      p3: "Interested in working on a project together?"
     }
   }
 }
