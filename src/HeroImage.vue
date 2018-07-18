@@ -7,7 +7,7 @@
         <p class="intro-text">{{introMsg}}</p>
         <b-img rounded="circle" class="intro-img" :src="imgPath" fluid alt="Responsive image"/>
     </template>
-    <b-container fluid class="">
+    <b-container fluid>
         <hr class="my-4">
             <b-row>
                 <b-col md="6" offset-md="3">
