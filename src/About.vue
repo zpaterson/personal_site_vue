@@ -1,6 +1,7 @@
 <template>
   <div>
     <app-heroImage :msg="message" :imgPath="path" :introP2="p2" :introP4="p4"></app-heroImage>
+    <app-footer></app-footer>
   </div>
 </template>
 

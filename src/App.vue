@@ -23,6 +23,7 @@
       </b-collapse>
     </b-navbar>
     <app-heroImage :msg="message" :introMsg="intro" :imgPath="path" :introP1="p1" :introP3="p3" v-if="['app'].indexOf($route.name)> -1"></app-heroImage>
+    <app-footer v-if="['app'].indexOf($route.name)> -1"></app-footer >
     <router-view></router-view>
   </div>
 </template>

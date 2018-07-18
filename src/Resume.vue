@@ -1,6 +1,7 @@
 <template>
        <div>
          <b-img  :src="resumeImage" fluid alt="Responsive image"/>
+         <app-footer></app-footer>
       </div>
 </template>
 
